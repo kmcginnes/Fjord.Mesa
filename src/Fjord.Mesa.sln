@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fjord.Mesa", "Fjord.Mesa\Fjord.Mesa.csproj", "{1F071C37-3373-4C8D-9204-D97DE68BD7C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fjord.Mesa.Web", "Fjord.Mesa.Web\Fjord.Mesa.Web.csproj", "{1F071C37-3373-4C8D-9204-D97DE68BD7C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
