@@ -1,1 +1,6 @@
-﻿<title>@ViewBag.Title</title>@RenderBody()
+﻿<title>@ViewBag.Title</title>
+@RenderSection("featured", required: false)
+<section class="content-wrapper main-content clear-fix">
+    @RenderBody()
+</section>
+@RenderSection("scripts", required: false)
