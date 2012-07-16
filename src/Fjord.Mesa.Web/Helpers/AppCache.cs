@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Caching;
 
 namespace Fjord.Mesa.Helpers
 {
@@ -14,12 +15,7 @@ namespace Fjord.Mesa.Helpers
 
         public static T FromCache<T>(string name, Func<T> create) where T : class
         {
-            return HttpRuntime.Cache.GetOrStore();
-            if (HttpRuntime.Cache[name] == null)
-            {
-                HttpRuntime.Cache.Insert(name, create(), null, DateTime.MaxValue, Cache.NoSlidingExpiration);
-            }
-            return (T)HttpRuntime.Cache[name];
+            return HttpRuntime.Cache.GetOrStore(name, create);
         }
     }
 }

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Configuration;
+using System.Diagnostics;
 
 namespace System.Web.Caching
 {
@@ -15,8 +13,13 @@ namespace System.Web.Caching
             T value = cache[key] as T;
             if (value == null)
             {
+                Debug.WriteLine(string.Format("Key '{0}' not found in cache. Generating and storing value.", key));
                 value = generator();
                 cache.Insert(key, value, null, DateTime.MaxValue, Cache.NoSlidingExpiration);
+            }
+            else
+            {
+                Debug.WriteLine(string.Format("Key '{0}' found in cache.", key));
             }
             return value;
         }
