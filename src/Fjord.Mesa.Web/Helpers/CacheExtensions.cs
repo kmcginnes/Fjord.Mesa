@@ -7,8 +7,8 @@ namespace System.Web.Caching
     {
         public static T GetOrStore<T>(this Cache cache, string key, Func<T> generator) where T : class
         {
-            if (ConfigurationManager.AppSettings["DISABLE_CACHE"] == "True")
-                return generator() as T;
+            if (ConfigurationManager.AppSettings["CacheEnabled"] == "False")
+                return generator();
 
             T value = cache[key] as T;
             if (value == null)
