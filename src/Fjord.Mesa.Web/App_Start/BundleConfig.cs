@@ -10,7 +10,7 @@ namespace Fjord.Mesa
         {
             bundles.AddScriptBundle("~/bundles/scripts/common")
                 .Include(
-                    "~/Scripts/jquery-{version}.js",
+                    "~/Scripts/jquery-1*",
                     "~/Scripts/jquery.pjax.js",
                     "~/Scripts/jquery.unobtrusive*",
                     "~/Scripts/jquery.validate*");
@@ -19,7 +19,7 @@ namespace Fjord.Mesa
                 .Include("~/Scripts/jquery-ui*");
             
             bundles.AddScriptBundle("~/bundles/scripts/modernizr")
-                .Include("~/Scripts/modernizr-{version}.js");
+                .Include("~/Scripts/modernizr-*");
 
             bundles.AddScriptBundle("~/bundles/scripts/application")
                 .IncludeDirectory("~/Scripts/Application", "*.js");
