@@ -1,3 +1,3 @@
 ﻿$(function () {
-    $("ul a").pjax("#body");
+    $("a").pjax("[data-pjax-container]");
 });

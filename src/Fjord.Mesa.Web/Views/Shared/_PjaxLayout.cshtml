@@ -1,6 +1,7 @@
 ﻿<title>@ViewBag.Title</title>
-@RenderSection("featured", required: false)
-<section class="content-wrapper main-content clear-fix">
-    @RenderBody()
-</section>
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit">
+    @RenderSection("featured", required: false)
+</div>
+@RenderBody()
 @RenderSection("scripts", required: false)
